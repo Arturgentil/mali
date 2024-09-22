@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Malu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+</head>
+<body>
+
+    <div class="screen initial-screen" id="initialScreen">
+        <h1>Oi, Malu!</h1>
+        <p>Tenho uma surpresa especial para você... 😏</p>
+        <button class="start-btn" onclick="showGameScreen()">Descubra!</button>
+    </div>
+
+    <div class="screen game-screen" id="gameScreen">
+        <h1>Caça ao Tesouro!</h1>
+        <p>Clique em todos os ciculos para descobrir a surpresa final! 😉</p>
+        
+        <div id="obj1" class="hidden-object" onclick="foundObject()"></div>
+        <div id="obj2" class="hidden-object" onclick="foundObject()"></div>
+        <div id="obj3" class="hidden-object" onclick="foundObject()"></div>
+
+        <div id="message1" class="message-box">Ótimo! Primeiro objeto encontrado!</div>
+        <div id="message2" class="message-box">Você encontrou o segundo objeto! Continue assim!</div>
+        <div id="message3" class="message-box">
+            Parabéns! Todos encontrados! 
+            <button class="btn" onclick="openTreasure()">Ver Tesouro</button>
+        </div>
+
+        <div id="finalMessage"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>
